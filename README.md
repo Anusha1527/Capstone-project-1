@@ -1,122 +1,159 @@
-# 🚀 Notification Prioritization Engine  
+# 🏭 Manufacturing Equipment Output Prediction  
+## Data Science Capstone Project  
 
-An AI/ML-based project that prioritizes notifications based on importance using machine learning techniques.
+### 📌 Project Overview
+
+This project focuses on predicting hourly production output (number of parts produced per hour) of injection molding machines using **Linear Regression**.
+
+The goal is to help manufacturing companies optimize machine settings, improve production efficiency, and identify underperforming equipment.
 
 ---
 
-## 📌 Project Overview
+## 🎯 Problem Statement
 
-The **Notification Prioritization Engine** is designed to intelligently classify and prioritize notifications so that users can focus on important alerts while minimizing distractions.
+Injection molding machines operate under various parameters such as temperature, pressure, cycle time, and material properties.  
 
-This project demonstrates:
-- Data preprocessing and cleaning
+This project builds a regression model that predicts:
+
+> 🎯 **Target Variable:** Parts Produced Per Hour
+
+Using machine operating conditions and environmental factors.
+
+---
+
+## 📊 Dataset Information
+
+- 📁 Type: Synthetic Manufacturing Dataset  
+- 📦 Size: 5,000+ records  
+- 🎯 Target: Hourly Production Output  
+
+### 🔢 Features
+
+- Injection_Temperature (°C)  
+- Injection_Pressure (bar)  
+- Cycle_Time (seconds)  
+- Cooling_Time (seconds)  
+- Material_Viscosity (Pa·s)  
+- Ambient_Temperature (°C)  
+- Machine_Age (years)  
+- Operator_Experience (months)  
+- Maintenance_Hours (hours since last maintenance)
+
+---
+
+## 🔄 Project Workflow
+
+### Step 1: Data Generation & Loading
+- Generated synthetic manufacturing dataset
+- Added realistic correlations and noise
+- Saved dataset as CSV
+
+### Step 2: Data Exploration
+- Checked data types and summary statistics
+- Identified missing values and outliers
+- Analyzed target distribution
+
+### Step 3: Exploratory Data Analysis (EDA)
+- Histograms for variable distributions
+- Correlation matrix
+- Scatter plots between features and output
+- Identified optimal operating ranges
+
+### Step 4: Data Preprocessing
+- Outlier handling using IQR method
 - Feature engineering
-- Model building using ML algorithms
-- Model evaluation and testing
-- Visualization of results
+- Train-test split
+
+### Step 5: Model Building
+- Built Linear Regression model
+- Trained using training dataset
+- Generated predictions on test dataset
+
+### Step 6: Model Evaluation
+- R² Score
+- MSE
+- RMSE
+- MAE
+- Residual analysis
+- Predicted vs Actual comparison
+
+### Step 7: Manufacturing Insights
+- Identified most impactful parameters
+- Interpreted regression coefficients
+- Provided optimization recommendations
+
+### Step 8: Business Recommendations
+- Suggested optimal machine settings
+- Recommended maintenance scheduling
+- Proposed monitoring framework
+
+### Step 9: Model Validation
+- Checked regression assumptions:
+  - Linearity
+  - Independence
+  - Homoscedasticity
+  - Normality
+- Assessed business impact
 
 ---
 
-## 🎯 Objective
+## 🚀 Deployment Pipeline (Advanced Extension)
 
-To build a machine learning model that:
-- Analyzes notification data
-- Classifies notifications based on priority
-- Helps reduce information overload
+### Step 10: Model Serialization
+- Saved model using Pickle
+- Saved preprocessing objects
+
+### Step 11: FastAPI Backend
+- Created REST API for predictions
+- Implemented input validation with Pydantic
+- Added health check endpoints
+
+### Step 12: Docker Deployment
+- Created Dockerfile
+- Added docker-compose.yml
+- Containerized FastAPI application
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python  
-- Google Colab / Jupyter Notebook  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- Scikit-learn  
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- FastAPI
+- Docker
+
+---
+
+## 📈 Expected Model Performance
+
+- 🎯 R² Score > 0.75 (Test Data)
+- Strong business-relevant insights
+- Statistically validated model
+
+---
+
+## 💡 Key Learnings
+
+- Manufacturing process analytics
+- Regression modeling
+- Feature engineering
+- Model validation
+- Business impact analysis
+- API development and deployment
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Notification-Prioritization-Engine/
+Manufacturing-Output-Prediction/
 │
 ├── capstone_project_1.ipynb
-├── README.md
-└── dataset/   
+├── dataset.csv
+└── README.md
 ```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the repository
-
-```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
-```
-
-### 2️⃣ Install dependencies
-
-```bash
-pip install numpy pandas matplotlib scikit-learn
-```
-
-Or open directly in **Google Colab**.
-
----
-
-## 🔄 Project Workflow
-
-1. Data Collection  
-2. Data Cleaning & Preprocessing  
-3. Feature Selection  
-4. Model Training  
-5. Model Evaluation  
-6. Performance Visualization  
-
----
-
-## 📊 Model Used
-
-- Logistic Regression / Decision Tree / Random Forest  
-- Evaluation Metrics: Accuracy, Precision, Recall, F1-Score  
-
----
-
-## 📈 Results
-
-- Successfully trained a model to classify notifications  
-- Achieved satisfactory accuracy on test dataset  
-- Visualized performance metrics using graphs  
-
----
-
-## 🧠 Skills Demonstrated
-
-- Machine Learning Fundamentals  
-- Data Preprocessing  
-- Model Evaluation  
-- Python Programming  
-- Data Visualization  
-
----
-
-## 🔮 Future Improvements
-
-- Deploy as a web application  
-- Integrate with real-time notification APIs  
-- Improve accuracy using advanced models  
-- Add deep learning-based classification  
-
----
-
-## 👩‍💻 Author
-
-**Anusha V**  
-Final Year Engineering Student  
-Interested in AI, ML, and Full Stack Development  
-
 ---
