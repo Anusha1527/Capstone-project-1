@@ -1,159 +1,160 @@
 # 🏭 Manufacturing Equipment Output Prediction  
-## Data Science Capstone Project  
-
-### 📌 Project Overview
-
-This project focuses on predicting hourly production output (number of parts produced per hour) of injection molding machines using **Linear Regression**.
-
-The goal is to help manufacturing companies optimize machine settings, improve production efficiency, and identify underperforming equipment.
+### 📊 Linear Regression for Production Optimization  
 
 ---
 
-## 🎯 Problem Statement
+## 🚀 Project Overview  
 
-Injection molding machines operate under various parameters such as temperature, pressure, cycle time, and material properties.  
+This project builds a **Linear Regression model** to predict the **hourly production output** of injection molding machines based on operational parameters such as temperature, pressure, cycle time, and maintenance conditions.
 
-This project builds a regression model that predicts:
+The goal is to help manufacturing teams:
 
-> 🎯 **Target Variable:** Parts Produced Per Hour
-
-Using machine operating conditions and environmental factors.
-
----
-
-## 📊 Dataset Information
-
-- 📁 Type: Synthetic Manufacturing Dataset  
-- 📦 Size: 5,000+ records  
-- 🎯 Target: Hourly Production Output  
-
-### 🔢 Features
-
-- Injection_Temperature (°C)  
-- Injection_Pressure (bar)  
-- Cycle_Time (seconds)  
-- Cooling_Time (seconds)  
-- Material_Viscosity (Pa·s)  
-- Ambient_Temperature (°C)  
-- Machine_Age (years)  
-- Operator_Experience (months)  
-- Maintenance_Hours (hours since last maintenance)
+- ⚙ Optimize machine settings  
+- 📈 Increase production efficiency  
+- 🔧 Identify underperforming machines  
+- 💰 Reduce operational costs  
 
 ---
 
-## 🔄 Project Workflow
+## 🎯 Problem Statement  
 
-### Step 1: Data Generation & Loading
-- Generated synthetic manufacturing dataset
-- Added realistic correlations and noise
-- Saved dataset as CSV
+Manufacturing companies operate injection molding machines to produce plastic components.  
 
-### Step 2: Data Exploration
-- Checked data types and summary statistics
-- Identified missing values and outliers
-- Analyzed target distribution
+Production output depends on multiple machine parameters such as:
 
-### Step 3: Exploratory Data Analysis (EDA)
-- Histograms for variable distributions
-- Correlation matrix
-- Scatter plots between features and output
-- Identified optimal operating ranges
+- Injection Temperature  
+- Injection Pressure  
+- Cycle Time  
+- Cooling Time  
+- Material Properties  
+- Machine Age  
+- Operator Experience  
 
-### Step 4: Data Preprocessing
-- Outlier handling using IQR method
-- Feature engineering
-- Train-test split
+This project predicts:
 
-### Step 5: Model Building
-- Built Linear Regression model
-- Trained using training dataset
-- Generated predictions on test dataset
+> 🏭 **Parts Produced Per Hour**
 
-### Step 6: Model Evaluation
-- R² Score
-- MSE
-- RMSE
-- MAE
-- Residual analysis
-- Predicted vs Actual comparison
-
-### Step 7: Manufacturing Insights
-- Identified most impactful parameters
-- Interpreted regression coefficients
-- Provided optimization recommendations
-
-### Step 8: Business Recommendations
-- Suggested optimal machine settings
-- Recommended maintenance scheduling
-- Proposed monitoring framework
-
-### Step 9: Model Validation
-- Checked regression assumptions:
-  - Linearity
-  - Independence
-  - Homoscedasticity
-  - Normality
-- Assessed business impact
+Using a supervised machine learning approach.
 
 ---
 
-## 🚀 Deployment Pipeline (Advanced Extension)
+## 📁 Dataset Information  
 
-### Step 10: Model Serialization
-- Saved model using Pickle
-- Saved preprocessing objects
+A **synthetic manufacturing dataset** (6000+ records) was generated with realistic industrial relationships.
 
-### Step 11: FastAPI Backend
-- Created REST API for predictions
-- Implemented input validation with Pydantic
-- Added health check endpoints
+### 🔹 Features
 
-### Step 12: Docker Deployment
-- Created Dockerfile
-- Added docker-compose.yml
-- Containerized FastAPI application
+| Feature | Description | Range |
+|----------|-------------|--------|
+| Injection_Temperature | Molten plastic temperature (°C) | 180–250 |
+| Injection_Pressure | Hydraulic pressure (bar) | 80–150 |
+| Cycle_Time | Time per production cycle (sec) | 15–45 |
+| Cooling_Time | Cooling duration (sec) | 8–20 |
+| Material_Viscosity | Flow resistance (Pa·s) | 100–400 |
+| Ambient_Temperature | Factory temperature (°C) | 18–28 |
+| Machine_Age | Machine age (years) | 1–15 |
+| Operator_Experience | Experience (months) | 1–120 |
+| Maintenance_Hours | Hours since last maintenance | 0–200 |
 
----
-
-## 🛠️ Tech Stack
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- FastAPI
-- Docker
+### 🎯 Target Variable
+`Parts_per_Hour`
 
 ---
 
-## 📈 Expected Model Performance
+## 🛠️ Tech Stack  
 
-- 🎯 R² Score > 0.75 (Test Data)
-- Strong business-relevant insights
-- Statistically validated model
-
----
-
-## 💡 Key Learnings
-
-- Manufacturing process analytics
-- Regression modeling
-- Feature engineering
-- Model validation
-- Business impact analysis
-- API development and deployment
+- 🐍 Python  
+- 📊 Pandas  
+- 🔢 NumPy  
+- 📉 Matplotlib  
+- 🎨 Seaborn  
+- 🤖 Scikit-Learn  
+- 💾 Pickle (Model Serialization)  
 
 ---
 
-## 📂 Project Structure
+## 🔍 Project Workflow  
 
+### 1️⃣ Data Generation  
+- Created synthetic dataset with realistic industrial relationships  
+- Added controlled noise for real-world behavior  
+
+### 2️⃣ Exploratory Data Analysis  
+- Histograms  
+- Correlation heatmap  
+- Scatter plots  
+- Target distribution analysis  
+
+### 3️⃣ Data Preprocessing  
+- Outlier removal (IQR method)  
+- Feature engineering (Efficiency ratio)  
+- Train-test split  
+- Feature scaling  
+
+### 4️⃣ Model Building  
+- Linear Regression  
+- Reproducible results using random state  
+
+### 5️⃣ Model Evaluation  
+
+Metrics used:
+
+- R² Score  
+- Mean Squared Error (MSE)  
+- Root Mean Squared Error (RMSE)  
+- Mean Absolute Error (MAE)  
+
+✔ Achieved **R² > 0.90** on test data  
+
+---
+
+## 📈 Model Performance  
+
+| Metric | Training | Testing |
+|--------|----------|----------|
+| R² Score | > 0.90 | > 0.90 |
+| RMSE | Low | Low |
+| MAE | Low | Low |
+
+The model satisfies the success criteria of:
+
+> ✅ R² > 0.75  
+
+---
+
+## 🧠 Key Manufacturing Insights  
+
+- 🔴 Higher Cycle Time reduces production output  
+- 🟢 Higher Injection Pressure increases output  
+- 🔵 Operator Experience improves efficiency  
+- 🟠 Machine Age negatively impacts productivity  
+- 🟣 Regular maintenance improves performance  
+
+---
+
+## 🏭 Production Optimization Recommendations  
+
+- Reduce Cycle Time within safe operating limits  
+- Maintain Injection Pressure between 100–130 bar  
+- Schedule maintenance every 100 hours  
+- Replace machines older than 10 years  
+- Invest in operator training programs  
+
+---
+
+## 💾 Model Deployment Ready  
+
+The trained model and scaler are saved using:
+
+```python
+pickle.dump(model, open("manufacturing_model.pkl", "wb"))
+pickle.dump(scaler, open("scaler.pkl", "wb"))
 ```
-Manufacturing-Output-Prediction/
-│
-├── capstone_project_1.ipynb
-├── dataset.csv
-└── README.md
 ```
----
+📦 Manufacturing-Output-Prediction
+ ┣ 📜 capstone_project.ipynb
+ ┣ 📜 manufacturing_data.csv
+ ┣ 📜 manufacturing_model.pkl
+ ┣ 📜 scaler.pkl
+ ┣ 📜 README.md
+```
